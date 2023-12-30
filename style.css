@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 :root{
     --GREEN-COLOR : #1ff9a9;
     --BG-COLOR : linear-gradient(0deg, rgb(0, 0, 0) 8%, rgb(141, 141, 141) 100%);
-}
+    --DARK-COLOR : #0A0A0A;
+}   
 body{
     height: 100vh;
     width: 100vw;
@@ -15,8 +19,10 @@ body{
     overflow: hidden;
 }
 main{
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     width: 100vw;
+    overflow-y: scroll;
 }
 
 nav{
@@ -38,7 +44,7 @@ nav{
     gap: 5px;
     color: white;
     border-radius: 20px;
-    max-width: 130px;
+    max-width: 135px;
 }
 .nav-items.active{
     background-color: rgba(0, 255, 149, 0.085);
@@ -65,3 +71,105 @@ nav{
     animation: widthIncrease 0.5s forwards;
 }
 
+i.menu-btn{
+    z-index: 99;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    position: fixed;
+    left: .5rem;
+    top: 1.5rem;
+}
+.menu-backdrop{
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    position: absolute;
+    backdrop-filter: blur(0px);
+    filter: brightness(100%);
+    transition: 0.5s;
+    display: none;
+}
+.menu-main{
+    z-index: 100;
+    height: 100vh;
+    width: 70vw;
+    position: absolute;
+    background-color:var(--DARK-COLOR);
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+.menu.active .menu-backdrop{
+    backdrop-filter: blur(1px);
+    filter: brightness(70%);
+    display: block;
+}
+.menu.active .menu-main{
+    transform: translateX(0%);
+}
+
+.blackhole-logo{
+    color: white;
+    font-weight: 900;
+    font-size: 3rem;
+    width: 100%;
+    height: 20%;
+    display: grid;
+    place-content: center;
+    background: radial-gradient(circle, rgba(32,32,32,1) 0%, rgba(10,10,10,1) 75%);
+
+}
+.menu .options{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-rows: repeat(6,50px);
+}
+.options .option{
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    color: white;
+    gap: 1.5rem;
+}
+.option.active{
+    color: var(--GREEN-COLOR);
+}
+.creator-name{
+    position: absolute;
+    color: white;
+    font-size: 0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    text-wrap: nowrap;
+}
+.welcome-tag{
+    margin: 4rem 0 0 .8rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.welcome-tag .hi{
+    color: var(--GREEN-COLOR);
+    font-weight: 800;
+}
+.search-bar{
+    width: 90%;
+    height: 50px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    gap: 10px;
+    margin-top: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 5px 5px 10px black;
+}
+.search-bar .input{
+    color: rgb(70, 70, 70);
+}
+.search-icon{
+    color: var(--GREEN-COLOR);
+}
