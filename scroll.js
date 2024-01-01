@@ -2,6 +2,7 @@ var main = document.querySelector('main');
 var searchBarContainer = document.querySelector('.search-bar-container');
 var menuBtn = document.querySelector('.menu-btn');
 
+//search bar
 main.addEventListener('scroll', () => {
     // Get the bounding rectangles of searchBarContainer and menuBtn
     var searchBarContainerRect = searchBarContainer.getBoundingClientRect();
@@ -21,3 +22,4 @@ main.addEventListener('scroll', () => {
         searchBarContainer.style.paddingLeft = '1rem';
     }
 });
+

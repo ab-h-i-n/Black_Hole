@@ -8,7 +8,7 @@
 }
 :root{
     --GREEN-COLOR : #1ff9a9;
-    --BG-COLOR : linear-gradient(0deg, rgb(0, 0, 0) 8%, rgb(141, 141, 141) 100%);
+    --BG-COLOR : linear-gradient(0deg, rgb(0, 0, 0) 8%, rgb(69, 69, 69) 100%);
     --DARK-COLOR : #0A0A0A;
 }   
 body{
@@ -70,13 +70,13 @@ nav{
 }
 
 i.menu-btn{
+    margin: .5rem;
     z-index: 99;
     color: white;
     font-size: 34px;
     font-weight: bold;
     position: fixed;
-    left: .5rem;
-    top: 1.5rem;
+    top: 1rem;
 }
 .menu-backdrop{
     width: 100%;
