@@ -19,12 +19,10 @@ body{
     overflow: hidden;
 }
 main{
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     overflow-y: scroll;
 }
-
 nav{
     position: fixed;
     width: 100%;
@@ -152,30 +150,46 @@ i.menu-btn{
     color: var(--GREEN-COLOR);
     font-weight: 800;
 }
+.search-bar-container{
+    width: 100%;
+    height:65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: sticky;
+    top: .5rem;
+    transition: 0.2s;
+}
 .search-bar{
-    width: 90%;
+    width: 100%;
     height: 50px;
     background-color: rgb(31, 31, 31);
     border-radius: 15px;
     display: flex;
     align-items: center;
     padding: 1rem;
-    gap: 10px;
-    margin-top: 1rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     box-shadow: 5px 5px 10px black;
+    transition: 0.2s;
 }
 .search-bar .input{
-    color: rgb(70, 70, 70);
+    flex: 1;
+    color: white;
+    padding: 0.8rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
 }
+.input:focus{
+    outline: none;
+}
+
 .search-icon{
     color: var(--GREEN-COLOR);
 }
-
+.main-content{
+    margin: 1rem 0 6rem 0;
+}
 .group{
-    margin-top: 6rem;
     width: 100%;
     display: flex;
     flex-direction: column;
