@@ -8,7 +8,7 @@
 }
 :root{
     --GREEN-COLOR : #1ff9a9;
-    --BG-COLOR : linear-gradient(0deg, rgb(0, 0, 0) 8%, rgb(69, 69, 69) 100%);
+    --BG-COLOR : linear-gradient(0deg, rgb(0, 0, 0) 8%, rgb(23, 23, 23) 100%);
     --DARK-COLOR : #0A0A0A;
 }   
 body{
